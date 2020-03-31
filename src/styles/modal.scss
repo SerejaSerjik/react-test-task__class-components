@@ -1,0 +1,123 @@
+:root {
+  --link-color: #aaa;
+  --border-color: #333;
+  --input-bg-color: #555;
+  --btn-color: #4894d4;
+}
+
+.modal-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 20px;
+  padding: 0px 100px;
+  border-radius: 3px;
+
+  @media screen and (max-width: 720px) {
+    padding: 0px 19px;
+  }
+}
+
+.modal-header {
+  background-color: var(--border-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 20px;
+
+  &__heading {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__close-btn {
+    background-color: var(--input-bg-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__close-btn:after {
+    content: "";
+    height: 13px;
+    border-left: 2px solid var(--border-color);
+    position: absolute;
+    transform: rotate(45deg);
+    left: 9px;
+    top: 3px;
+  }
+
+  &__close-btn:before {
+    content: "";
+    height: 13px;
+    border-left: 2px solid var(--border-color);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 9px;
+    top: 3px;
+  }
+}
+
+.modal-body {
+  & input {
+    background-color: #f7f7f7;
+    outline: none;
+    width: 100%;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    height: 44px;
+    padding: 0px 15px;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #000
+  }
+
+  & label {
+    margin-top: 15px;
+    color: #777;
+    font-size: 13px;
+    font-weight: normal;
+    display: block;
+  }
+}
+
+.modal-text {
+  color: var(--input-bg-color);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.modal-body, .modal-footer {
+  padding: 19px;
+  background-color: #fff;
+}
+
+.modal-footer {
+  box-shadow: 0 -3px 10px -4px rgba(0, 0, 0, 0.4);
+
+  & button {
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #999;
+    text-align: center;
+
+    &[type="submit"] {
+      background-color: var(--btn-color);
+    }
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}

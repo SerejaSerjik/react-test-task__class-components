@@ -1,0 +1,2 @@
+export const GET_FORM_DATA = "GET_FORM_DATA";
+export const GET_EMAIL_FOR_RESTORE = "GET_EMAIL_FOR_RESTORE";
